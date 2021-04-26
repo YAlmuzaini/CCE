@@ -1,6 +1,20 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+.flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rectangle {
+  background: url("../img/image2.png") top/cover no-repeat;
+  width: 83rem;
+  height: 37rem;
+  right: 15rem;
+  top: -5rem;
+  z-index: 1;
+}
 
 :root {
   --color-theme: #009e8b;
