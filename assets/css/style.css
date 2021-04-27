@@ -1,28 +1,30 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-.flexbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.rectangle {
-  background: url("../img/image2.png") top/cover no-repeat;
-  width: 83rem;
-  height: 37rem;
-  right: 15rem;
-  top: -5rem;
-  z-index: 1;
-}
-
+/* ////////////////////////////////// */
 :root {
   --color-theme: #009e8b;
   --color-hover: #66c5b9;
   --color-title: #26544d;
+  --color-dark: #132a27;
+  --color-dark-hover: #214742;
+}
+
+@font-face {
+  font-family: "Dazzed";
+  src: url(../fonts/Dazzed-Regular.ttf);
+  unicode-range: U+0000-007F;
+}
+
+@font-face {
+  font-family: "Almarai";
+  src: url(../fonts/Almarai-Regular.ttf);
+  unicode-range: U+0600-06FF;
 }
 
 body {
+  /* font-family: Almarai, Dazzed; */
   font-family: "Open Sans", sans-serif;
   color: #444444;
 }
@@ -763,6 +765,92 @@ section {
     transform: scale(1, 1);
     opacity: 0;
   }
+}
+
+/* ///my about/// */
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+  border-radius: 5px;
+  background-color: floralwhite;
+  border-color: #c2e8e3;
+  border-style: solid;
+  padding: 5px;
+}
+.item:last-child {
+  margin-bottom: 0;
+}
+.item .right {
+  flex: 1;
+  padding-left: 60px;
+}
+.item:nth-child(odd) .left {
+  order: 2;
+}
+.item:nth-child(odd) .right {
+  padding-left: 0;
+  padding-right: 60px;
+}
+
+@media all and (max-width: 640px) {
+  .icon {
+    margin-bottom: 20px;
+  }
+  .item {
+    display: block;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .item .right {
+    padding: 0;
+  }
+  .item:nth-child(odd) .right {
+    padding-right: 0px;
+  }
+}
+
+.icon {
+  background-color: var(--color-dark);
+  color: #fff;
+  font-size: 4vw;
+  font-weight: 600;
+  width: 15vw;
+  height: 15vw;
+  border: 10px solid var(--color-title);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+@media (max-width: 770px) {
+  .icon {
+    font-size: 5vw;
+    width: 24vw;
+    height: 24vw;
+  }
+}
+
+.item-1 {
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 30px -30px var(--color-dark);
+}
+
+.left .btn-info {
+  background-color: var(--color-dark);
+  border-color: var(--color-dark-hover);
+  color: white;
+}
+
+.left .btn-info:hover {
+  background-color: var(--color-dark-hover);
+  border-color: var(--color-dark);
 }
 
 /*--------------------------------------------------------------
