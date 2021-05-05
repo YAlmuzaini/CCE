@@ -1003,6 +1003,7 @@ section {
 
 .about-boxes .card-text {
   color: #5e5e5e;
+  font-weight: 600;
 }
 
 .about-boxes .card:hover .card-icon i {
