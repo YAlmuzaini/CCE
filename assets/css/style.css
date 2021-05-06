@@ -247,7 +247,7 @@ h6 {
   padding: 8px 25px;
   margin-left: 30px;
   border-radius: 4px;
-  color: #fff;
+  /* color: #fff; */
   border: 2px solid #fff;
 }
 
@@ -1023,7 +1023,7 @@ section {
 .partners {
   background: url("../img/imageedit_3.png") center no-repeat;
   background-size: cover;
-  background-color: #f0f4f8;
+  background-color: #fff;
   padding: 15px 0;
   text-align: center;
 }
