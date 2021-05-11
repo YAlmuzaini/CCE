@@ -589,7 +589,7 @@ section {
   margin: 0 0 5px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #5c8eb0;
+  color: var(--color-title);
   font-family: "Poppins", sans-serif;
 }
 
@@ -609,7 +609,17 @@ section {
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #263d4d;
+  color: var(--color-dark);
+}
+
+.section-title a {
+  margin: 0;
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: var(--color-dark);
 }
 
 /*--------------------------------------------------------------
@@ -806,7 +816,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
   border-radius: 5px;
   background-color: white;
   /* border-color: #c2e8e3; */
@@ -1053,6 +1063,42 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Clients
+--------------------------------------------------------------*/
+
+.clients .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.clients .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid var(--color-hover);
+}
+
+.clients .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--color-theme);
+}
+
+.clients .swiper-slide img {
+  opacity: 0.5;
+  padding: 20px 0;
+  min-width: 110px;
+  filter: grayscale(100%);
+  transform: skewY(-3deg);
+  transition: all 0.4s ease-in-out;
+}
+
+.clients .swiper-slide img:hover {
+  filter: none;
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+/*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
 .features .nav-tabs {
@@ -1277,6 +1323,117 @@ section {
   opacity: 1;
 }
 
+/*--------------------------------------------------------------
+# Courses
+--------------------------------------------------------------*/
+/* .courses .course-item {
+  box-sizing: content-box;
+  padding: 30px 30px 0 30px;
+  background-color: red;
+  margin: 0px 0px;
+  text-align: center;
+  min-height: 350px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.28);
+} */
+
+.courses .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.courses .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid var(--color-hover);
+}
+
+.courses .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--color-hover);
+}
+
+/* ///////// */
+
+.courses-item {
+  margin-bottom: 30px;
+  overflow: hidden;
+  /* background-color: #fff; */
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.28);
+}
+
+.courses-item img {
+  position: relative;
+  top: 0;
+  transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.courses-item .course-info {
+  opacity: 0;
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  bottom: -50px;
+  z-index: 3;
+  transition: all ease-in-out 0.5s;
+  background: var(--color-theme);
+  padding: 15px 20px;
+}
+
+.courses-item .course-info h4 {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  text-align: start;
+}
+
+.courses-item .course-info p {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.courses-item .course-info .preview-link,
+.courses-item .course-info .details-link {
+  position: absolute;
+  right: 50px;
+  font-size: 24px;
+  top: calc(50% - 18px);
+  color: white;
+  transition: ease-in-out 0.3s;
+}
+
+.courses-item .course-info .preview-link:hover,
+.courses-item .course-info .details-link:hover {
+  color: var(--color-hover);
+}
+
+.courses-item .course-info .details-link {
+  right: 15px;
+}
+
+.courses-item:hover img {
+  top: 0px;
+}
+.courses-item:hover .course-info {
+  opacity: 1;
+  bottom: 50px;
+}
+
+.Course-btn {
+  padding-top: 40px;
+}
+
+.Course-btn .btn-info {
+  background-color: var(--color-dark);
+  border-color: var(--color-dark-hover);
+  color: white;
+}
+
+.Course-btn .btn-info:hover {
+  background-color: var(--color-dark-hover);
+  border-color: var(--color-dark);
+}
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
