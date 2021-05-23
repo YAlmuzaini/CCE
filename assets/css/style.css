@@ -1773,10 +1773,20 @@ section {
 # Breadcrumbs
 --------------------------------------------------------------*/
 .breadcrumbs {
-  padding: 25px 0;
+  padding: 15px 0;
   background: #f0f4f8;
   min-height: 40px;
   margin-top: 78px;
+}
+
+.breadcrumbs #inner-nav {
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 991px) {
+  .breadcrumbs #inner-nav {
+    padding-top: 25px;
+  }
 }
 
 .breadcrumbs h2 {
