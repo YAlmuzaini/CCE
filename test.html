@@ -1,280 +1,91 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/9a416a1cca.js"
+      crossorigin="anonymous"
+    ></script>
 
     <style>
-      .course2-item {
-        margin-bottom: 30px;
-      }
-
-      .course2-item .course2-info {
-        opacity: 0;
+      .side-menu {
+        width: 300px;
+        height: 100%;
+        padding: 50px 0;
+        box-sizing: border-box;
+        background-image: linear-gradient(0deg, #3381b0, #87cefa);
+        display: flex;
+        flex-flow: column nowrap;
+        box-shadow: 5px 0px 10px rgba(17, 26, 41, 0.6);
         position: absolute;
-        left: 30px;
-        right: 30px;
+
+        transition: 0.5s;
+      }
+      .side-menu label {
+        position: absolute;
+        width: 40px;
+        height: 80px;
+        background-color: #000;
+        color: #fff;
+        right: -40px;
+        top: 0;
         bottom: 0;
-        z-index: 3;
-        transition: all ease-in-out 0.3s;
-        background: rgba(255, 255, 255, 0.9);
-        padding: 15px;
-      }
-
-      .course2-item .course2-info h4 {
-        font-size: 18px;
-        color: #fff;
-        font-weight: 600;
-        color: #473d3a;
-      }
-
-      .course2-item .course2-info p {
-        color: #7f6d68;
-        font-size: 14px;
-        margin-bottom: 0;
-      }
-
-      .course2-item .course2-info .preview-link,
-      .course2-item .course2-info .details-link {
-        position: absolute;
-        right: 40px;
-        font-size: 24px;
-        top: calc(50% - 18px);
-        color: #635551;
-      }
-
-      .course2-item .course2-info .preview-link:hover,
-      .course2-item .course2-info .details-link:hover {
-        color: #ff5821;
-      }
-
-      .course2-item .course2-info .details-link {
-        right: 10px;
-      }
-
-      .course2-item .portfolio-links {
-        opacity: 0;
-        left: 0;
-        right: 0;
+        margin: auto;
+        line-height: 85px;
         text-align: center;
-        z-index: 3;
+        font-size: 30px;
+        border-bottom-right-radius: 100px;
+        border-top-right-radius: 100px;
+      }
+      #side-menu-switch {
         position: absolute;
-        transition: all ease-in-out 0.3s;
+        opacity: 0;
       }
-
-      .course2-item .portfolio-links a {
+      #side-menu-switch:checked + .side-menu {
+        transform: translateX(-100%);
+      }
+      #side-menu-switch:checked + .side-menu label .fas {
+        transform: scaleX(-1);
+      }
+      ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
         color: #fff;
-        margin: 0 2px;
-        font-size: 28px;
-        display: inline-block;
-        transition: 0.3s;
+        opacity: 1; /* Firefox */
       }
-
-      .course2-item .portfolio-links a:hover {
-        color: #ffa587;
+      .sidenav a {
+        display: block;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+        font-family: "Noto Sans TC", sans-serif;
       }
-
-      .course2-item:hover .course2-info {
-        opacity: 1;
-        bottom: 20px;
+      .sidenav a + a::before {
+        content: "";
+        position: absolute;
+        border-top: 1px solid #fff;
+        left: 10px;
+        right: 10px;
+        top: 0;
       }
     </style>
   </head>
   <body>
-    <!-- ======= courses Section ======= -->
-    <section id="courses" class="courses section-bg">
-      <div class="container">
-        <div class="section-title" data-aos="zoom-out">
-          <h2>Courses</h2>
-          <a href="aboutUs.html">Check our certified courses</a>
-        </div>
-
-        <div
-          class="courses-slider swiper-container"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="course2-item">
-                <img
-                  src="assets/img/portfolio/portfolio-3.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="course2-info">
-                  <h4>App 2</h4>
-                  <p>App</p>
-                  <a
-                    href="assets/img/portfolio/portfolio-3.jpg"
-                    data-gallery="portfolioGallery"
-                    class="portfolio-lightbox preview-link"
-                    title="App 2"
-                    ><i class="bx bx-plus"></i
-                  ></a>
-                  <a
-                    href="portfolio-details.html"
-                    class="details-link"
-                    title="More Details"
-                    ><i class="bx bx-link"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <!-- End course item -->
-
-            <div class="swiper-slide">
-              <div class="course-item courses-item">
-                <img
-                  class="img-fluid"
-                  src="assets/img/portfolio/CEC.jpg"
-                  alt=""
-                />
-                <div class="course-info">
-                  <h4>TEACHER TRAINING CERTIFICATE</h4>
-                  <p>TTC</p>
-                  <a
-                    href="assets/img/portfolio/CEC.jpg"
-                    data-gallery="portfolioGallery"
-                    class="portfolio-lightbox preview-link"
-                    title="App 31"
-                    ><i class="bx bx-plus"></i
-                  ></a>
-                  <a
-                    href="portfolio-details.html"
-                    class="details-link"
-                    title="More Details"
-                    ><i class="bx bx-link"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <!-- End course item -->
-
-            <div class="swiper-slide">
-              <div class="course-item courses-item">
-                <img
-                  class="img-fluid"
-                  src="assets/img/portfolio/Cambridge.jpg"
-                  alt=""
-                />
-                <div class="course-info">
-                  <h4>TEACHER TRAINING CERTIFICATE</h4>
-                  <p>TTC</p>
-                  <a
-                    href="assets/img/portfolio/Cambridge.jpg"
-                    data-gallery="portfolioGallery"
-                    class="portfolio-lightbox preview-link"
-                    title="App 31"
-                    ><i class="bx bx-plus"></i
-                  ></a>
-                  <a
-                    href="portfolio-details.html"
-                    class="details-link"
-                    title="More Details"
-                    ><i class="bx bx-link"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <!-- End course item -->
-
-            <div class="swiper-slide">
-              <div class="course-item courses-item">
-                <img
-                  class="img-fluid"
-                  src="assets/img/portfolio/EMBA.jpg"
-                  alt=""
-                />
-                <div class="course-info">
-                  <h4>TEACHER TRAINING CERTIFICATE</h4>
-                  <p>TTC</p>
-                  <a
-                    href="assets/img/portfolio/EMBA.jpg"
-                    data-gallery="portfolioGallery"
-                    class="portfolio-lightbox preview-link"
-                    title="App 31"
-                    ><i class="bx bx-plus"></i
-                  ></a>
-                  <a
-                    href="portfolio-details.html"
-                    class="details-link"
-                    title="More Details"
-                    ><i class="bx bx-link"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <!-- End course item -->
-
-            <div class="swiper-slide">
-              <div class="course-item courses-item">
-                <img
-                  class="img-fluid"
-                  src="assets/img/portfolio/CEC.jpg"
-                  alt=""
-                />
-                <div class="course-info">
-                  <h4>TEACHER TRAINING CERTIFICATE</h4>
-                  <p>TTC</p>
-                  <a
-                    href="assets/img/portfolio/CEC.jpg"
-                    data-gallery="portfolioGallery"
-                    class="portfolio-lightbox preview-link"
-                    title="App 31"
-                    ><i class="bx bx-plus"></i
-                  ></a>
-                  <a
-                    href="portfolio-details.html"
-                    class="details-link"
-                    title="More Details"
-                    ><i class="bx bx-link"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <!-- End course item -->
-          </div>
-          <div class="text-center Course-btn">
-            <a class="btn btn-info" href="inner-page.html">View All Courses</a>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section>
-    <!-- End courses Section -->
-
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/purecounter/purecounter.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <input type="checkbox" name="" id="side-menu-switch" />
+    <div class="side-menu">
+      <nav class="sidenav">
+        <a href="#"><i class="fas fa-gavel"></i>lorem</a>
+        <a href="#"><i class="fas fa-gavel"></i>lorem</a>
+        <a href="#"><i class="fas fa-gavel"></i>lorem</a>
+        <a href="#"><i class="fas fa-gavel"></i>lorem</a>
+        <a href="#"><i class="fas fa-gavel"></i>lorem</a>
+      </nav>
+      <label for="side-menu-switch">
+        <i class="fas fa-angle-left"></i>
+      </label>
+    </div>
   </body>
 </html>

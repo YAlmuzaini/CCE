@@ -1986,10 +1986,9 @@ section {
 .sidebar {
   margin: 0;
   padding: 0;
-  width: 200px;
   background-color: #f0f4f8;
-  position: static;
   height: 100%;
+  position: static;
   overflow: auto;
 }
 
@@ -2010,29 +2009,10 @@ section {
   color: white;
 }
 
-/* div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;
-} */
-
-@media screen and (max-width: 700px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .sidebar a {
-    float: left;
-  }
-  /* div.content {
-    margin-left: 0;
-  } */
+div.inner-content {
+  padding: 15px 16px;
 }
 
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: left;
-    float: none;
-  }
+#about-img {
+  padding: 25px 25px 25px 0;
 }
