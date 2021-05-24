@@ -10,6 +10,7 @@
   --color-dark: #132a27;
   --color-dark-hover: #214742;
   --font-Dazzed-SemiBold: "Dazzed-SemiBold";
+  --swiper-navigation-size: 35px;
 }
 
 @font-face {
@@ -555,6 +556,11 @@ section {
 
 .ex-section {
   padding: 0;
+}
+
+.ex-section-about {
+  padding: 25px 0 0 0;
+  overflow: hidden;
 }
 
 /* .section-bg {
@@ -1103,6 +1109,34 @@ section {
   opacity: 1;
   transform: scale(1.15);
 }
+
+.clients .swiper-button-next {
+  right: 10px;
+  left: auto;
+}
+
+.clients .swiper-button-next {
+  position: absolute;
+  top: 45%;
+  width: calc(var(--swiper-navigation-size));
+  height: var(--swiper-navigation-size);
+  margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
+  color: var(--color-dark);
+}
+
+.clients .swiper-button-prev {
+  left: 10px;
+  right: auto;
+}
+
+.clients .swiper-button-prev {
+  position: absolute;
+  top: 45%;
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
+  color: var(--color-dark);
+}
 /*--------------------------------------------------------------
 # workshop
 --------------------------------------------------------------*/
@@ -1557,6 +1591,10 @@ section {
 --------------------------------------------------------------*/
 .team {
   position: relative;
+}
+
+.team h2 {
+  padding-bottom: 5px;
 }
 
 .team .container {
@@ -2015,4 +2053,18 @@ div.inner-content {
 
 #about-img {
   padding: 25px 25px 25px 0;
+}
+
+@media (max-width: 992px) {
+  #about-img {
+    padding: 25px 25px 25px 25px;
+  }
+}
+
+.inner-content p {
+  line-height: 1.6;
+}
+
+.inner-content li:not(:last-child) {
+  margin-bottom: 5px;
 }
