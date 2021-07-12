@@ -36,103 +36,15 @@
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
-    />
-
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
-    <!-- <link rel="stylesheet" href="mycss.css" /> -->
 
-    <style>
-      .notification-wrapper {
-        position: fixed;
-        top: 45%;
-        z-index: 999;
-      }
-      .notification-button {
-        position: relative;
-        width: 2.5em;
-        height: 5em;
-        border-radius: 0 5em 5em 0;
-        background-color: #11173f;
-        color: #fff;
-        text-align: center;
-        box-shadow: 1 1 1 1 #bac2e8;
-        padding-top: 20px;
-        cursor: pointer;
-      }
-      .notification-button.active {
-        z-index: 20;
-        position: relative;
-        background: #fff;
-        background-size: auto;
-        box-shadow: none;
-        background-size: 30px 30px;
-      }
-      .notification-panel {
-        width: 6em;
-        height: 6em;
-        border-radius: 50%;
-        transform-origin: left center;
-      }
-      .notification-panel {
-        background-color: #445db7;
-        box-shadow: -0.696px 4.951px 111px 0px rgba(0, 0, 0, 0.47);
-        position: fixed;
-        -webkit-transition: all 0.3s ease-out 0.1s;
-        -moz-transition: all 0.3s ease-out 0.1s;
-        -ms-transition: all 0.3s ease-out 0.1s;
-        -o-transition: all 0.3s ease-out 0.1s;
-        transition: all 0.3s ease-out 0.1s;
-        -moz-transform: scale(0);
-        -o-transform: scale(0);
-        -ms-transform: scale(0);
-        -webkit-transform: scale(0);
-        transform: scale(0);
-        z-index: 10;
-        left: -5%;
-        top: 45%;
-      }
-      .notification-panel.active {
-        background-color: #212e7e;
-        transform: scale(6);
-      }
-
-      .notification-panel .notification-content {
-        position: relative;
-        left: 5%;
-        top: 10%;
-        color: #090909;
-        font-size: 5px;
-        color: white;
-      }
-
-      .notification-panel.active .notification-content {
-        opacity: 1;
-      }
-
-      @media screen and (max-width: 769px) {
-        .notification-panel {
-          left: 0;
-          top: 0%;
-          width: 100%;
-          height: 100%;
-          border-radius: 0;
-          border-color: black;
-          transform-origin: left center;
-        }
-        .notification-panel.active {
-          background-color: #212e7e;
-          transform: scale(1);
-        }
-
-        .notification-panel .notification-content {
-          font-size: 40px;
-        }
-      }
-    </style>
+    <!-- =======================================================
+  * Template Name: Dewi - v4.1.0
+  * Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
   </head>
 
   <body>
@@ -258,21 +170,210 @@
       </section>
       <!-- End Breadcrumbs -->
 
-      <!-- Start inner section -->
-      <div class="notification-wrapper">
-        <div class="notification-animation"></div>
-        <div id="notification-button" class="notification-button"></div>
-        <div class="notification-panel">
-          <div class="notification-content">
-            <ul>
-              <li>test 1</li>
-              <li>test 2</li>
-              <li>test 3</li>
-            </ul>
+      <!-- ======= Contact Section ======= -->
+      <section id="contact" class="contact">
+        <div class="container-fluid" data-aos="fade-up">
+          <!-- <div class="section-title">
+            <h2>Contact</h2>
+            <p>Contact Us</p>
+          </div> -->
+
+          <div class="row">
+              <div class="col-lg-6">
+                  <div class="row">
+                      <form role="form" class="contact-form" style="margin-bottom: 30px;">
+                        <div class="row">
+                          <div class="col-md-6 form-group">
+                            <input
+                              type="text"
+                              name="name"
+                              class="form-control"
+                              id="name"
+                              placeholder="Your Name"
+                              required
+                            />
+                          </div>
+                          <div class="col-md-6 form-group mt-3 mt-md-0">
+                            <input
+                              type="email"
+                              class="form-control"
+                              name="email"
+                              id="email"
+                              placeholder="Your Email"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <div class="form-group mt-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="subject"
+                            id="subject"
+                            placeholder="Subject"
+                            required
+                          />
+                        </div>
+                        <div class="form-group mt-3">
+                          <textarea
+                            class="form-control"
+                            name="message"
+                            rows="5"
+                            placeholder="Message"
+                            required
+                          ></textarea>
+                        </div>
+                        <div class="my-3">
+                          <div class="loading">Loading</div>
+                          <div class="error-message"></div>
+                          <div class="sent-message">
+                            Your message has been sent. Thank you!
+                          </div>
+                        </div>
+                        <div class="text-center">
+                          <button type="submit">Send Message</button>
+                        </div>
+                      </form>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                      <div class="info-box mb-4">
+                        <i class="bx bx-map"></i>
+                        <h3>Our Address</h3>
+                        <p>
+                          Abdulaziz Bin Adbulrahman Al-Saud Road, Ahmadi, 53301, Kuwait
+                        </p>
+                      </div>
+                    </div>
+        
+                    <div class="col-lg-4 col-md-6">
+                      <div class="info-box mb-4">
+                        <i class="bx bx-envelope"></i>
+                        <h3>Email Us</h3>
+                        <p>cce@k-tech.edu.kw</p>
+                      </div>
+                    </div>
+        
+                    <div class="col-lg-4 col-md-6">
+                      <div class="info-box mb-4">
+                        <i class="bx bx-phone-call"></i>
+                        <h3>Call Us</h3>
+                        <p>22285075 - 22285076</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-lg-6">
+                <iframe
+                  class="mb-4 mb-lg-0"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3485.041756414789!2d48.114918615150486!3d29.133958782222717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf08565caf347f%3A0x37351b57c1c79cfc!2skuwait%20technical%20college!5e0!3m2!1sen!2skw!4v1619338889365!5m2!1sen!2skw"
+                  frameborder="0"
+                  style="border: 0; width: 100%; height: 100vh"
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
+              </div>
           </div>
+
+          <!-- <div class="row">
+            <div class="col-lg-6">
+              <div class="info-box mb-4">
+                <i class="bx bx-map"></i>
+                <h3>Our Address</h3>
+                <p>
+                  Abdulaziz Bin Adbulrahman Al-Saud Road, Ahmadi, 53301, Kuwait
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="info-box mb-4">
+                <i class="bx bx-envelope"></i>
+                <h3>Email Us</h3>
+                <p>cce@k-tech.edu.kw</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="info-box mb-4">
+                <i class="bx bx-phone-call"></i>
+                <h3>Call Us</h3>
+                <p>22285075 - 22285076</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <iframe
+                class="mb-4 mb-lg-0"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3485.041756414789!2d48.114918615150486!3d29.133958782222717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf08565caf347f%3A0x37351b57c1c79cfc!2skuwait%20technical%20college!5e0!3m2!1sen!2skw!4v1619338889365!5m2!1sen!2skw"
+                frameborder="0"
+                style="border: 0; width: 100%; height: 384px"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+
+            <div class="col-lg-6">
+              <form role="form" class="contact-form">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      id="name"
+                      placeholder="Your Name"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      id="email"
+                      placeholder="Your Email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="subject"
+                    id="subject"
+                    placeholder="Subject"
+                    required
+                  />
+                </div>
+                <div class="form-group mt-3">
+                  <textarea
+                    class="form-control"
+                    name="message"
+                    rows="5"
+                    placeholder="Message"
+                    required
+                  ></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">
+                    Your message has been sent. Thank you!
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button type="submit">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div> -->
         </div>
-      </div>
-      <!-- End inner section -->
+      </section>
+      <!-- End Contact Section -->
     </main>
     <!-- End #main -->
 
@@ -385,22 +486,5 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        //this for remove Popup
-        // setTimeout(removeAnnouncePopup, 10000);
-
-        function removeAnnouncePopup() {
-          $(".notification-button").removeClass("active");
-          $(".notification-panel").removeClass("active");
-        }
-
-        $(".notification-wrapper").click(function () {
-          $(".notification-button").toggleClass("active");
-          $(".notification-panel").toggleClass("active");
-        });
-      });
-    </script>
   </body>
 </html>
